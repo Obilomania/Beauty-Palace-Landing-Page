@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* --------------------------------------Navigation------------------------------------ */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* z-index: 2 ; */
+}
+nav .logo img {
+  width: 300px;
+  margin: 20px 0px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li .nav-link {
+  margin: 0px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+nav ul li .nav-link:hover {
+  color: #d32b5e;
+}
+nav ul li .nav-link:visited {
+  color: white;
+}
+nav ul li .dropdown-item_ {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: white;
+}
+nav .bookings a {
+  margin-top: 100px;
+  width: 40px;
+  padding: 10px;
+  background-color: #d32b5e;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+nav .bookings a:hover {
+  color: #d32b5e;
+  background-color: white;
+}
+/* -------------------------Landing Page------------------------------------------------- */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.land-img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landwrite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 100px;
+  top: 300px;
+  line-height: 80px;
+}
+.landing h1 {
+  color: #d32b5e;
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-size: 90px;
+  font-weight: 700;
+}
+.landing h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-size: 50px;
+  font-weight: 700;
+
+}
+.bk_text a {
+  width: fit-content;
+  padding: 10px 25px;
+  height: 20px;
+  background-color: #d32b5e;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: 1s all ease;
+}
+.bk_text a:hover {
+  color: #d32b5e;
+  background-color: white;
+}
+
+/* -------------------------------MEDIA QUERY FOR NAVIGATION & LANDING------------------------------------ */
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav {
+    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    transition: 0.75s all ease-in-out;
+  }
+  nav .logo img {
+    width: 250px;
+  }
+  .nav-open {
+    background: rgb(95, 19, 19);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    transition: 0.75s all ease-in-out;
+  }
+  .toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* border: 1px solid white; */
+    padding: 10px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .toggle1 {
+    width: 15px;
+    background-color: white;
+    height: 2px;
+    border-radius: 5px;
+  }
+  .toggle2 {
+    width: 25px;
+    background-color: white;
+    height: 2px;
+    border-radius: 5px;
+    margin: 7px 0px;
+  }
+  .toggle3 {
+    width: 32px;
+    background-color: white;
+    height: 2px;
+    border-radius: 5px;
+  }
+  /* .toggle4 {
+    transform: rotate(60deg);
+    width: 35px;
+    margin-bottom: 15px;
+    background-color: white;
+    height: 2px;
+    border-radius: 5px;
+    transition: 0.75s all ease-in-out;
+  }
+  .toggle5 {
+    transform: rotate(120deg);
+    width: 35px;
+    margin-top: 15px;
+    background-color: white;
+    height: 2px;
+    border-radius: 5px;
+    transition: 0.75s all ease-in-out;
+  } */
+  /* ----------------------------------Landing---------------------------------------- */
+  .landing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-image: url(/images/mobile-Background.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  .land-img {
+    display: none;
+  }
+  .landwrite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 30px;
+    top: 300px;
+    line-height: 30px;
+  }
+  .landing h1 {
+    color: #d32b5e;
+    font-family: "Montserrat", sans-serif;
+    font-variant: small-caps;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .landing h2 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-variant: small-caps;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .bk_text a {
+    width: fit-content;
+    padding: 10px 25px;
+    font-size: 10px;
+    height: 20px;
+    background-color: #d32b5e;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  .bk_text a:hover {
+    color: #d32b5e;
+    background-color: white;
+  }
+}
